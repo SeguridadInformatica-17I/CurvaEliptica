@@ -1,0 +1,36 @@
+# Site settings
+title: Criptografía de curva
+description: "Criptografía de curva"
+author:
+  name: "Enrique Peinado-Julio Silva"
+  email: "epeinador@uni.pe-jsilva@uni.pe"
+
+# Build settings
+baseurl: /
+markdown: kramdown
+source: .
+destination: ./_site
+permalink: /:title
+paginate: 8
+paginate_path: /page:num/
+
+# Default values
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Plugins
+gems:
+  - jekyll-paginate
+
+# Custom variables
+version: "1.1.0"
+
+# Options
+custom_header: false
+custom_nav_footer: false
+reverse: false
