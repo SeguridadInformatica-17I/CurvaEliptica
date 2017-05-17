@@ -13,9 +13,9 @@ title: Definiciones Previas
   * Existencia de elemento opuesto y de inversos:
   * Distributividad de la multiplicación respecto de la adición
 
-* Sea K un cuerpo y x∈K* = K–{0}. El orden de x es el mínimo número r>0 talque x^r= 1.
+* Sea K un cuerpo y x∈K* = K-{0}. El orden de x es el mínimo número r>0 talque x^r= 1.
 
-* Sea K un cuerpo. La clausura algebraica deKes el cuerpomáspequeñoque contiene a K y tal que cualquier polinomio con coeficientes en K tiene todas las raíces en este cuerpo
+* Sea K un cuerpo. La clausura algebraica de K es el cuerpo más pequeño que contiene a K y tal que cualquier polinomio con coeficientes en K tiene todas las raíces en este cuerpo
 
 * La característica de un cuerpo K es el mínimo número "p" tal que para todo $x∈K$ se cumple que 1 + 1 + ... + 1(p veces)=0, donde 0 es el elemento neutro de la suma y 1 es el elemento neutro del producto en elcuerpo K. Escribiremos $char(K) =p$.
 
