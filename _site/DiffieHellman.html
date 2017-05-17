@@ -121,14 +121,38 @@
 
 			<article id="page">
 	
-  <h2 id="diffie-hellman-con-curva-elı́ptica">Diffie-Hellman con curva elı́ptica</h2>
+  <h2 id="elliptic-curve-diffiehellman-ecdh">Elliptic curve Diffie–Hellman (ECDH)</h2>
 
-<p>Diffie-Hellman: protocolo para intercambio de claves</p>
+<h3 id="parámetros-del-dominio">Parámetros del dominio:</h3>
 
-<p>Sea E una curva elı́ptica con G un generador de un subgrupo cı́clico de orden prima p</p>
+<p>Nuestros algoritmos de curva elíptica funcionarán en un subgrupo cíclico de una curva elíptica sobre un campo finito. Por lo tanto, nuestros algoritmos necesitarán los siguientes parámetros:</p>
 
 <ul>
-  <li>Alice elige un entero secreto x A ; Bob elige x B</li>
+  <li>El primo p que especifica el tamaño del campo finito.</li>
+  <li>Los coeficientes a y  De la ecuación de la curva elíptica.</li>
+  <li>El punto base G que genera nuestro subgrupo.</li>
+  <li>La orden n del subgrupo.</li>
+  <li>El cofactor h del subgrupo.</li>
+</ul>
+
+<p>En conclusión, los parámetros de dominio para nuestros algoritmos son el sextuplo (p, a, b, G, n, h)
+.</p>
+
+<h3 id="algoritmo">Algoritmo:</h3>
+
+<p>Diffie-Hellman: protocolo para intercambio de claves.</p>
+
+<p>Sea E una curva elı́ptica con G un generador de un subgrupo cı́clico de orden prima p.</p>
+
+<ul>
+  <li>La clave privada es un entero aleatorio X elegido de {1, …, n-1} (donde n es el orden del subgrupo).</li>
+  <li>La clave pública es el punto Y = X.G (Donde G es el punto base del subgrupo).</li>
+</ul>
+
+<p>Si sabemos <strong>Y</strong> y <strong>G</strong> (junto con los otros parámetros del dominio), encontrar Y es “fácil”. Pero si conocemos Y y G, encontrar la clave privada X es “difícil”, porque nos obliga a resolver el problema del logaritmo discreto.</p>
+
+<ul>
+  <li>Alice elige un entero secreto XA ; Bob elige XB</li>
   <li>Las claves públicas correspondientes son
     <ul>
       <li>YA = xA · G</li>
@@ -144,7 +168,7 @@
   </li>
 </ul>
 
-<h2 id="ejemplo">Ejemplo:</h2>
+<h3 id="ejemplo">Ejemplo:</h3>
 
 <p>Si tenemos la curva:</p>
 
@@ -164,8 +188,26 @@
     <p>Bob calcula K = xB · YA = 9 · (4,5) = (6,5)</p>
   </li>
   <li>K = xA · xB · G = 4 · 9 · G = (36 mod 11) · G =</li>
-  <li>K = 3 · G = (6,5)</li>
+  <li>K = 3 · G = (6,5) = (Kenc,Kmac)</li>
 </ul>
+
+<h3 id="key-encrypion-y-key--mac">Key encrypion y key  MAC</h3>
+<blockquote>
+  <p>El cifrado proporciona confidencialidad, un MAC proporciona integridad. El uso de cifrado solo hace que sus mensajes sean vulnerables a un ataque de texto cifrado.</p>
+</blockquote>
+
+<ul>
+  <li>
+    <p>Confidencialidad:  Es la protección de datos y de información intercambiada entre un emisor y uno o más destinatarios frente a terceros. Esto debe hacerse independientemente de la seguridad del sistema de comunicación utilizado, de hecho un asunto de interés es el problema de garantizar la Confidencialidad de la comunicación utilizada cuando el sistema es inseguro.</p>
+  </li>
+  <li>
+    <p>Integridad: Es la propiedad que busca mantener los datos libres de modificaciones no autorizadas. La violación de la Integridad se presenta cuando un empleado, programa o proceso por accidente o con mala intención, modifica o borra los datos importantes que son parte de la información, así mismo hace que su contenido permanezca inalterado a menos que sea modificado por el personal autorizado; y esta modificación será registrada, asegurando su precisión y confiabilidad.</p>
+  </li>
+</ul>
+
+<blockquote>
+  <p>El problema de Diffie-Hellman para las curvas elípticas se supone que es un problema “duro”. Se cree que es tan “difícil” como el problema del logaritmo discreto, aunque no hay pruebas matemáticas disponibles. Lo que podemos afirmar con seguridad es que no puede ser “más difícil”, porque resolver el problema del logaritmo es una forma de resolver el problema de Diffie-Hellman.</p>
+</blockquote>
 
 
 </article>
