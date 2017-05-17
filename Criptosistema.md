@@ -2,7 +2,7 @@
 layout: page
 title: Criptosistema
 ---
-#  Criptosistema
+##  Criptosistema
 
 "Un Criptosistema se define como la quíntupla (m,C,K,E,D), donde:
 

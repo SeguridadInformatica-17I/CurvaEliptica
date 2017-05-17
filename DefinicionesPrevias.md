@@ -2,7 +2,7 @@
 layout: page
 title: Definiciones Previas
 ---
-# Definiciones Previas:
+## Definiciones Previas:
 
 * Cuerpo
   Un cuerpo es un anillo de división conmutativo, es decir, un anillo conmutativo y unitario en el que todo elemento distinto de cero es invertible respecto del producto. Por tanto un cuerpo es un conjunto K en el que se han definido dos operaciones, + y ·, llamadas adición y multiplicación respectivamente, que la propiedades:
@@ -26,5 +26,5 @@ title: Definiciones Previas
   * (G, ⊛) posee un elemento de identidad o elemento neutro e.
   * (G, ⊛) es un grupo si además, verifica la existencia de elemento simétrico para cada uno de sus elementos.
   * (G, ⊛) es grupo abeliano si además, cumple la propiedad conmutativa.
-  
+
 [back to the homepage]({{ site.baseurl }}).

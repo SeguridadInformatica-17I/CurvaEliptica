@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<!-- Meta -->
+	<meta charset="UTF-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="generator" content="Jekyll">
+
+	<title>Bitcoin - CCE</title>
+
+	<!-- CSS & fonts -->
+	<link rel="stylesheet" href="/css/main.css">
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,400italic%7CSignika:700,300,400,600' rel='stylesheet' type='text/css'>
+
+	<!-- RSS -->
+	<link href="/atom.xml" type="application/atom+xml" rel="alternate" title="ATOM Feed" />
+
+</head>
+
+
+<body>
+	<div id="wrap">
+	  	
+	  	<!-- Navigation -->
+	  	<nav id="nav">
+	<div id="nav-list">
+		<a href="/">Home</a>
+		<!-- Nav pages -->
+	  
+	    
+	      <a href="
+										/Criptosistema
+								 " title="Criptosistema">Criptosistema</a>
+	    
+	  
+	    
+	      <a href="
+										/DefinicionesPrevias
+								 " title="Definiciones Previas">Definiciones Previas</a>
+	    
+	  
+	    
+	      <a href="
+										/Introduccion
+								 " title="Introduccion">Introduccion</a>
+	    
+	  
+	    
+	      <a href="
+										/about
+								 " title="About">About</a>
+	    
+	  
+	    
+	  
+	    
+	      <a href="
+										/bitcoinCCE
+								 " title="Bitcoin - CCE">Bitcoin - CCE</a>
+	    
+	  
+	    
+	  
+	    
+	  
+	    
+	  
+
+    <!-- Nav links -->
+	  <a href="https://github.com/DataAnalytics171ERE/DataAnalytics171ERE.github.io/archive/DataAnalytics171ERE.github.io-master.zip">Download</a>
+<a href="https://github.com/DataAnalytics171ERE/DataAnalytics171ERE.github.io">Project on Github</a>
+
+
+	</div>
+
+  <!-- Nav footer -->
+	
+	  <footer>
+	
+	<span>version 1.1.0</span>
+
+</footer>
+	
+
+</nav>
+
+    
+    <!-- Icon menu -->
+	  <a id="nav-menu">
+	  	<div id="menu"></div>
+	  </a>
+
+      <!-- Header -->
+      
+        <header id="header">
+	<a href="/">
+		<!--<img src="/img/emerald.svg" alt="Emerald Logo">-->
+	  <h1>Criptografía de curva</h1>
+	</a>
+</header>
+
+      
+
+    <!-- Main content -->
+	  <div id="container">
+		  
+		<main>
+
+			<article id="page">
+	
+  <h2 id="por-qué-se-utiliza-criptografía-de-curva-elíptica-en-bitcoin-ecdsa-vi">¿Por qué se utiliza Criptografía de Curva Elíptica en Bitcoin? ECDSA (VI)</h2>
+
+<blockquote>
+  <p>ECDSA. Elliptic Curve Digital Signature Algorithm es una modificación del algoritmo DSA que emplea operaciones sobre puntos de curvas elípticas en lugar de las exponenciaciones que usa DSA (problema del logaritmo discreto). La principal ventaja de este esquema es que requiere números de tamaños menores para brindar la misma seguridad que DSA o RSA. Existen dos tipos de curvas dependiendo del campo finito en el que se definan, que pueden ser GF(P) o GF(2m).</p>
+</blockquote>
+
+<p>El protocolo Bitcoin utiliza el algoritmo ECDSA (Elliptic Curve Digital Signature Algorithm) para la creación de claves privadas y públicas. ECDSA es una variante del Digital Signature Algorithm (DSA) que utiliza la criptografía de curva elíptica (Elliptic curve cryptography – ECC) como variante de la criptografía asimétrica o de clave pública. En este artículo vamos a describir las principales características de la criptografía de curva elíptica y su aplicación en el protocolo Bitcoin.</p>
+
+<p>La criptografía de curva elíptica puede ser más rápida y usar claves más cortas que los métodos antiguos — como RSA — al tiempo que proporcionan un nivel de seguridad superior.</p>
+
+<p>Los primeros algoritmos de cifrado de clave pública se basaban en la factorización de números primos grandes, tal como describimos en nuestro artículo sobre las bases matemáticas del algoritmo RSA, pero estos ya no se consideran seguros cuando se cuándo utilizan claves cortas. La criptografía de curva elíptica con los actuales medios técnicos genera claves “intractable” en inglés, que traducido al español significa “difícil de resolver” pero no imposible, aunque con la tecnología actual tardaría miles de años.</p>
+
+<h2 id="por-qué-utiliza-el-protocolo-de-bitcoin-criptografía-de-curva-elíptica">¿Por qué utiliza el protocolo de Bitcoin criptografía de curva elíptica?</h2>
+
+<p>Uno de los problemas más importantes al que se tenía que enfrentar Satoshi Nakamoto cuando creó el protocolo Bitcoin fue la distribución de las claves públicas. Era importante poder utilizar claves públicas cortas, pero seguras que se pudieran compartir en códigos QR, imprimir en dispositivos físicos y compartir por teléfono si hacía falta.</p>
+
+<p>La principal ventaja de la criptografía de curva elíptica es la posibilidad de crear claves más pequeñas, reduciendo así requisitos de almacenamiento y transmisión. Una clave basada en la criptografía de curva elíptica puede dar el mismo nivel de seguridad con un clave de 256 bits como un algoritmo RSA con una clave de 2048 bits.</p>
+
+<p>El algoritmo ECDSA crea claves de 256 bits de longitud codificados con el sistema de numeración posicional Base58 de Bitcoin que da claves de 44 dígitos sin incluir el número de versión o dígitos de control. Una clave con RSA necesitaría de 350 dígitos.</p>
+
+<p>La razón principal para utilizar criptografía de curva elíptica era pues facilitar el manejo de las direcciones públicas del protocolo Bitcoin.</p>
+
+<p>Aun así, Satoshi Nakamoto decidió que los 44 dígitos eran demasiados para una dirección pública y decidió aplicar un proceso de funciones hash para la creación de las claves públicas que explicaremos en otro artículo. La clave pública ECDSA inicial acaba al final de ese proceso de hash en 160 bits que, incluyendo los datos de versión y los dígitos de control, tienen desde 27 a 34 dígitos. Por ejemplo como esta dirección pública: 1DZEazabbJqtr2uciLFNxvgm1GBuS5kaej</p>
+
+<h2 id="bases-matemáticas-de-la-criptografía-de-curva-elíptica">Bases matemáticas de la criptografía de curva elíptica</h2>
+
+<p>Los sistemas de criptografía asimétrica o de clave pública utilizan dos claves distintas: una de ellas es la clave pública, la otra es la clave privada. La posesión de la clave pública no proporciona información para determinar cuál es la clave privada. Este tipo de sistemas se basa en la dificultad de encontrar la solución a ciertos problemas matemáticos. Uno de estos problemas es el llamado logaritmo discreto. Encontrar el valor de b dada la ecuación a^b = c, cuando a y c son valores conocidos, puede ser un problema de complejidad exponencial para ciertos grupos finitos de gran tamaño.</p>
+
+<p>En cambio, el problema inverso (la exponenciación discreta) puede ser evaluado eficientemente usando, por ejemplo, exponenciación binaria, la cual es ideal para su uso en la criptografía de clave pública en la que se necesita una clave privada segura y una clave pública que se pueda compartir con el resto del mundo derivada de la clave privada. Fuente de Wikipedia.</p>
+
+
+</article>
+
+	  </main>
+		
+		  <!-- Pagination links -->
+      
+
+	  </div>
+	    
+	    <!-- Footer -->
+	    <footer><span>@2017 - Peinado - Silva</span></footer>
+
+
+	    <!-- Script -->
+      <script src="/js/main.js"></script>	
+
+
+	</div>
+</body>
+</html>

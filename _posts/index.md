@@ -1,17 +1,17 @@
 ---
 layout: default
-title: Pandas y HDFS con DataFrame Dask
+title: Criptografía de curva
 ---
-INTRODUCCIÓN
+Resumen
 ====================
-La rapidez con la que se genera información hoy en día es muy grande, por lo tanto las aplicaciones basadas en información generada por estos entes deben tener características como tener un procesamiento en paralelo, tolerante a fallos, escalables y de alta disponibilidad. Por ello las tegnología que se usarán en torno al lenguaje de python.
+* No se trata de un nuevo criptosistema, sino de un
+nuevo enfoque.
+* Se trata de usar funciones de un solo sentido en un
+contexto nuevo, usando una aritmética que hace los
+problemas más difíciles.
+* Las curvas elípticas han sido muy estudiadas desde hace más de 150 años. Su uso en Criptografía fue propuesto en 1985 independientemente por Neal Koblitz(Univ. de Washington) y Victor Miller (IBM, Yorktown Heights).
+* Unacurva elíptica es una curva en el plano tal que cada línea que la corta en 2 puntos, la corta además exactamente en un tercer punto.
 
-Estan son:
-* Pandas
-* Librería Dask
-* Dataframe Dask
-* HDFS
+![](/img/curva.svg)
 
-Por ultimo veremos una aplicación:
-<img src="{{ "/img/apli.png" | prepend: site.baseurl | replace: '//', '/' }}" alt="Aplicación">
 [back to the homepage]({{ site.baseurl }}).

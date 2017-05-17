@@ -2,7 +2,7 @@
 layout: page
 title: Introduccion
 ---
-# Introducción
+## Introducción
 
 En los sistemas de criptografía asimétrica se utiliza 2 tipos de claves, las cuales son: la clave pública y la clave privada. En la cual mediante conceptos matemáticos podemos tener la certeza que conseguir la clave privada en cada unas de la partes(cifrado y descifrado) no sean faciles de calcular conociéndose la clave pública.
 
