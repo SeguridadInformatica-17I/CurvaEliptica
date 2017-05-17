@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="generator" content="Jekyll">
 
-	<title>Definiciones Previas</title>
+	<title>Aritmétrica Geométrica</title>
 
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="/css/main.css">
@@ -121,41 +121,73 @@
 
 			<article id="page">
 	
-  <h2 id="definiciones-previas">Definiciones Previas:</h2>
+  <p>Como ya mencionamos una curva elíptica sobre un cuerpo finito está formada por un conjunto finito de puntos.</p>
+
+<p>Analizando el siguiente gráfico:</p>
+
+<p><img src="img/ima7.png" alt="" /></p>
 
 <ul>
-  <li>Cuerpo
-Un cuerpo es un anillo de división conmutativo, es decir, un anillo conmutativo y unitario en el que todo elemento distinto de cero es invertible respecto del producto. Por tanto un cuerpo es un conjunto K en el que se han definido dos operaciones, + y ·, llamadas adición y multiplicación respectivamente, que la propiedades:
-    <ul>
-      <li>K es cerrado para la adición y la multiplicación</li>
-      <li>Asociatividad de la adición y la multiplicación</li>
-      <li>Conmutatividad de la adición y la multiplicación</li>
-      <li>Existencia de un elemento neutro para la adición y la multiplicación</li>
-      <li>Existencia de elemento opuesto y de inversos:</li>
-      <li>Distributividad de la multiplicación respecto de la adición</li>
-    </ul>
-  </li>
-  <li>
-    <p>Sea K un cuerpo y x∈K* = K–{0}. El orden de x es el mínimo número r&gt;0 talque x^r= 1.</p>
-  </li>
-  <li>
-    <p>Sea K un cuerpo. La clausura algebraica deKes el cuerpomáspequeñoque contiene a K y tal que cualquier polinomio con coeficientes en K tiene todas las raíces en este cuerpo</p>
-  </li>
-  <li>
-    <p>La característica de un cuerpo K es el mínimo número “p” tal que para todo $x∈K$ se cumple que 1 + 1 + … + 1(p veces)=0, donde 0 es el elemento neutro de la suma y 1 es el elemento neutro del producto en elcuerpo K. Escribiremos $char(K) =p$.</p>
-  </li>
-  <li>
-    <p>Si para todo $n∈N$, 1 + 1 +…+ 1(p veces)=0 decimos que $char(K) = 0$.</p>
-  </li>
-  <li>Grupo es una estructura algebraica formada por un conjunto no vacío dotado de una operación interna que combina cualquier par de elementos para componer un tercero, dentro del mismo conjunto y que satisface las propiedades asociativa, existencia de elemento neutro y simétrico.
-    <ul>
-      <li>(G, ⊛) verifica la propiedad asociativa.</li>
-      <li>(G, ⊛) posee un elemento de identidad o elemento neutro e.</li>
-      <li>(G, ⊛) es un grupo si además, verifica la existencia de elemento simétrico para cada uno de sus elementos.</li>
-      <li>(G, ⊛) es grupo abeliano si además, cumple la propiedad conmutativa.</li>
-    </ul>
-  </li>
+  <li>Hay simetría horizontal.</li>
+  <li>Nótese que tiene 31 puntos.</li>
+  <li>El número de puntos de la curva no es siempre primo, por lo que se elige un subgrupo cíclico suficientemente
+grande.</li>
 </ul>
+
+<h2 id="aritmétrica-geométrica">Aritmétrica Geométrica</h2>
+
+<ul>
+  <li>El opuesto (negativo) de un punto P= (x, y) es su simétrico respecto al eje x : ‒P= (x, ‒y).</li>
+</ul>
+
+<p><img src="img/ima8.png" alt="" /></p>
+
+<blockquote>
+  <p>Para sumar P y ―P lo anterior no funciona ya que la línea que los une no corta a la curva en otro punto. Para evitar este problema se añade un punto del infinito que se designa por O, y por definición se dice que P+(‒P)=O (y por tanto P + O = P).</p>
+</blockquote>
+
+<ul>
+  <li>Para sumar dos puntos P, Q (con P≠‒Q ) se traza una línea que los une, que corta a la curva en otro punto R; entonces P+Q = ‒R.</li>
+</ul>
+
+<p><img src="img/ima10.png" alt="" /></p>
+
+<ul>
+  <li>Para sumar P consigo mismo se traza la tangente en P, que corta a la curva en otro punto ‒ R; entonces 2P = P + P = R.</li>
+</ul>
+
+<p><img src="img/ima9.png" alt="" /></p>
+
+<blockquote>
+  <p>Caso especial:
+Si P= (x, 0) entonces la tangente es vertical y no corta de nuevo a la curva. Entonces se establece que 2P = O.</p>
+</blockquote>
+
+<blockquote>
+  <p>NOTA:
+Debemos evitar las curvas con singularidades (tangente no es posible cuando discriminante = 0)</p>
+</blockquote>
+
+<h2 id="el-cálculo-de-la-suma">El cálculo de la suma:</h2>
+
+<ul>
+  <li>es posible deducir fórmulas para calcular la suma</li>
+  <li>ellas dependerán de la característica del cuerpo K.</li>
+</ul>
+
+<p>Por ejemplo:</p>
+
+<ul>
+  <li>Si y^2 = (x^3+ ax + b), con 4a^3+ 27b^2 != 0 mod  p</li>
+</ul>
+
+<p><img src="img/ima11.png" alt="" /></p>
+
+<ul>
+  <li>Si y^2+cy= (x^3 + ax + b), con c != 0 mod 2^m</li>
+</ul>
+
+<p><img src="img/ima12.png" alt="" /></p>
 
 <p><a href="/">back to the homepage</a>.</p>
 

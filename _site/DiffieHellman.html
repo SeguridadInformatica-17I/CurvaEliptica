@@ -7,7 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 	<meta name="generator" content="Jekyll">
 
-	<title>Definiciones Previas</title>
+	<title>Diffie-Hellman con curva elı́ptica</title>
 
 	<!-- CSS & fonts -->
 	<link rel="stylesheet" href="/css/main.css">
@@ -121,43 +121,51 @@
 
 			<article id="page">
 	
-  <h2 id="definiciones-previas">Definiciones Previas:</h2>
+  <h2 id="diffie-hellman-con-curva-elı́ptica">Diffie-Hellman con curva elı́ptica</h2>
+
+<p>Diffie-Hellman: protocolo para intercambio de claves</p>
+
+<p>Sea E una curva elı́ptica con G un generador de un subgrupo cı́clico de orden prima p</p>
 
 <ul>
-  <li>Cuerpo
-Un cuerpo es un anillo de división conmutativo, es decir, un anillo conmutativo y unitario en el que todo elemento distinto de cero es invertible respecto del producto. Por tanto un cuerpo es un conjunto K en el que se han definido dos operaciones, + y ·, llamadas adición y multiplicación respectivamente, que la propiedades:
+  <li>Alice elige un entero secreto x A ; Bob elige x B</li>
+  <li>Las claves públicas correspondientes son
     <ul>
-      <li>K es cerrado para la adición y la multiplicación</li>
-      <li>Asociatividad de la adición y la multiplicación</li>
-      <li>Conmutatividad de la adición y la multiplicación</li>
-      <li>Existencia de un elemento neutro para la adición y la multiplicación</li>
-      <li>Existencia de elemento opuesto y de inversos:</li>
-      <li>Distributividad de la multiplicación respecto de la adición</li>
+      <li>YA = xA · G</li>
+      <li>YB = xB · G</li>
     </ul>
   </li>
-  <li>
-    <p>Sea K un cuerpo y x∈K* = K–{0}. El orden de x es el mínimo número r&gt;0 talque x^r= 1.</p>
-  </li>
-  <li>
-    <p>Sea K un cuerpo. La clausura algebraica deKes el cuerpomáspequeñoque contiene a K y tal que cualquier polinomio con coeficientes en K tiene todas las raíces en este cuerpo</p>
-  </li>
-  <li>
-    <p>La característica de un cuerpo K es el mínimo número “p” tal que para todo $x∈K$ se cumple que 1 + 1 + … + 1(p veces)=0, donde 0 es el elemento neutro de la suma y 1 es el elemento neutro del producto en elcuerpo K. Escribiremos $char(K) =p$.</p>
-  </li>
-  <li>
-    <p>Si para todo $n∈N$, 1 + 1 +…+ 1(p veces)=0 decimos que $char(K) = 0$.</p>
-  </li>
-  <li>Grupo es una estructura algebraica formada por un conjunto no vacío dotado de una operación interna que combina cualquier par de elementos para componer un tercero, dentro del mismo conjunto y que satisface las propiedades asociativa, existencia de elemento neutro y simétrico.
+  <li>La clave compartida es
     <ul>
-      <li>(G, ⊛) verifica la propiedad asociativa.</li>
-      <li>(G, ⊛) posee un elemento de identidad o elemento neutro e.</li>
-      <li>(G, ⊛) es un grupo si además, verifica la existencia de elemento simétrico para cada uno de sus elementos.</li>
-      <li>(G, ⊛) es grupo abeliano si además, cumple la propiedad conmutativa.</li>
+      <li>K = xA · xB · G</li>
+      <li>Alice calcula K = xA · YB</li>
+      <li>Bob calcula K = xB · YA</li>
     </ul>
   </li>
 </ul>
 
-<p><a href="/">back to the homepage</a>.</p>
+<h2 id="ejemplo">Ejemplo:</h2>
+
+<p>Si tenemos la curva:</p>
+
+<blockquote>
+  <p>y^2 = x^3 +x - 1, sobre Z7,con G=(1,1)</p>
+</blockquote>
+
+<p><img src="img/ima13.png" alt="" /></p>
+
+<ul>
+  <li>Alice elige xA = 4; calcula YA = 4 · G = (4,5)</li>
+  <li>
+    <p>Bob elige xB = 9; calcula YB = 9 · G = (2,3)</p>
+  </li>
+  <li>Alice calcula K = xA · YB = 4 · (2,3) = (6,5)</li>
+  <li>
+    <p>Bob calcula K = xB · YA = 9 · (4,5) = (6,5)</p>
+  </li>
+  <li>K = xA · xB · G = 4 · 9 · G = (36 mod 11) · G =</li>
+  <li>K = 3 · G = (6,5)</li>
+</ul>
 
 
 </article>
