@@ -7,11 +7,11 @@ title: Bitcoin - CCE
 
 > ECDSA. Elliptic Curve Digital Signature Algorithm es una modificación del algoritmo DSA que emplea operaciones sobre puntos de curvas elípticas en lugar de las exponenciaciones que usa DSA (problema del logaritmo discreto). La principal ventaja de este esquema es que requiere números de tamaños menores para brindar la misma seguridad que DSA o RSA. Existen dos tipos de curvas dependiendo del campo finito en el que se definan, que pueden ser GF(P) o GF(2m).
 
-El protocolo Bitcoin utiliza el algoritmo ECDSA (Elliptic Curve Digital Signature Algorithm) para la creación de claves privadas y públicas. ECDSA es una variante del Digital Signature Algorithm (DSA) que utiliza la criptografía de curva elíptica (Elliptic curve cryptography – ECC) como variante de la criptografía asimétrica o de clave pública. En este artículo vamos a describir las principales características de la criptografía de curva elíptica y su aplicación en el protocolo Bitcoin.
+El protocolo Bitcoin utiliza el algoritmo ECDSA (Elliptic Curve Digital Signature Algorithm) para la creación de claves privadas y públicas. ECDSA es una variante del Digital Signature Algorithm (DSA) que utiliza la criptografía de curva elíptica (Elliptic curve cryptography – ECC) como variante de la criptografía asimétrica o de clave pública.
 
 La criptografía de curva elíptica puede ser más rápida y usar claves más cortas que los métodos antiguos — como RSA — al tiempo que proporcionan un nivel de seguridad superior.
 
-Los primeros algoritmos de cifrado de clave pública se basaban en la factorización de números primos grandes, tal como describimos en nuestro artículo sobre las bases matemáticas del algoritmo RSA, pero estos ya no se consideran seguros cuando se cuándo utilizan claves cortas. La criptografía de curva elíptica con los actuales medios técnicos genera claves “intractable” en inglés, que traducido al español significa “difícil de resolver” pero no imposible, aunque con la tecnología actual tardaría miles de años.
+Los primeros algoritmos de cifrado de clave pública se basaban en la factorización de números primos grandes, pero estos ya no se consideran seguros cuando se cuándo utilizan claves cortas. La criptografía de curva elíptica con los actuales medios técnicos genera claves “intractable” en inglés, que traducido al español significa “difícil de resolver” pero no imposible, aunque con la tecnología actual tardaría miles de años.
 
 ## ¿Por qué utiliza el protocolo de Bitcoin criptografía de curva elíptica?
 
