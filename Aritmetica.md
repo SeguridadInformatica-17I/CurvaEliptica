@@ -14,7 +14,7 @@ Analizando el siguiente gráfico:
 * El número de puntos de la curva no es siempre primo, por lo que se elige un subgrupo cíclico suficientemente
 grande.
 
-## Aritmétrica Geométrica
+### Aritmétrica Geométrica
 
 * El opuesto (negativo) de un punto P= (x, y) es su simétrico respecto al eje x : ‒P= (x, ‒y).
 
@@ -37,10 +37,10 @@ Si P= (x, 0) entonces la tangente es vertical y no corta de nuevo a la curva. En
 Debemos evitar las curvas con singularidades (tangente no es posible cuando discriminante = 0)
 
 
-## El cálculo de la suma:
+### El cálculo de la suma:
 
-* es posible deducir fórmulas para calcular la suma
-* ellas dependerán de la característica del cuerpo K.
+* Es posible deducir fórmulas para calcular la suma
+* Ellas dependerán de la característica del cuerpo K.
 
 Por ejemplo:
 

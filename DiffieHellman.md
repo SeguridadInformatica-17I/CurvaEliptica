@@ -2,11 +2,10 @@
 layout: page
 title: Diffie-Hellman con curva elı́ptica
 ---
-## Elliptic curve Diffie–Hellman (ECDH)
 
 ### Parámetros del dominio:
 
-Nuestros algoritmos de curva elíptica funcionarán en un subgrupo cíclico de una curva elíptica sobre un campo finito. Por lo tanto, nuestros algoritmos necesitarán los siguientes parámetros:
+Nuestros algoritmos de curva elíptica funcionarán en un [subgrupo cíclico](https://es.wikipedia.org/wiki/Grupo_c%C3%ADclico) de una curva elíptica sobre un campo finito. Por lo tanto, nuestros algoritmos necesitarán los siguientes parámetros:
 
 * El primo p que especifica el tamaño del campo finito.
 * Los coeficientes a y  De la ecuación de la curva elíptica.
@@ -14,8 +13,7 @@ Nuestros algoritmos de curva elíptica funcionarán en un subgrupo cíclico de u
 * La orden n del subgrupo.
 * El cofactor h del subgrupo.
 
-En conclusión, los parámetros de dominio para nuestros algoritmos son el sextuplo (p, a, b, G, n, h)
-.
+En conclusión, los parámetros de dominio para nuestros algoritmos son el sextuplo (p, a, b, G, n, h).
 
 ### Algoritmo:
 
@@ -55,10 +53,11 @@ Si tenemos la curva:
 * K = 3 · G = (6,5) = (Kenc,Kmac)
 
 ### Key encrypion y key  MAC
+
 > El cifrado proporciona confidencialidad, un MAC proporciona integridad. El uso de cifrado solo hace que sus mensajes sean vulnerables a un ataque de texto cifrado.
 
-* Confidencialidad:  Es la protección de datos y de información intercambiada entre un emisor y uno o más destinatarios frente a terceros. Esto debe hacerse independientemente de la seguridad del sistema de comunicación utilizado, de hecho un asunto de interés es el problema de garantizar la Confidencialidad de la comunicación utilizada cuando el sistema es inseguro.
+* **Confidencialidad:**  Es la protección de datos y de información intercambiada entre un emisor y uno o más destinatarios frente a terceros. Esto debe hacerse independientemente de la seguridad del sistema de comunicación utilizado, de hecho un asunto de interés es el problema de garantizar la Confidencialidad de la comunicación utilizada cuando el sistema es inseguro.
 
-* Integridad: Es la propiedad que busca mantener los datos libres de modificaciones no autorizadas. La violación de la Integridad se presenta cuando un empleado, programa o proceso por accidente o con mala intención, modifica o borra los datos importantes que son parte de la información, así mismo hace que su contenido permanezca inalterado a menos que sea modificado por el personal autorizado; y esta modificación será registrada, asegurando su precisión y confiabilidad.
+* **Integridad:** Es la propiedad que busca mantener los datos libres de modificaciones no autorizadas. La violación de la Integridad se presenta cuando un empleado, programa o proceso por accidente o con mala intención, modifica o borra los datos importantes que son parte de la información, así mismo hace que su contenido permanezca inalterado a menos que sea modificado por el personal autorizado; y esta modificación será registrada, asegurando su precisión y confiabilidad.
 
 > El problema de Diffie-Hellman para las curvas elípticas se supone que es un problema "duro". Se cree que es tan "difícil" como el problema del logaritmo discreto, aunque no hay pruebas matemáticas disponibles. Lo que podemos afirmar con seguridad es que no puede ser "más difícil", porque resolver el problema del logaritmo es una forma de resolver el problema de Diffie-Hellman.
