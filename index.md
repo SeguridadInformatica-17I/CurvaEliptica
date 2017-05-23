@@ -12,6 +12,6 @@ title: Criptografía de curva
 
 * Unacurva elíptica es una curva en el plano tal que cada línea que la corta en 2 puntos, la corta además exactamente en un tercer punto.
 
-![Curva Elíptica](/img/curva.svg)
+![](/img/curva.svg)
 
 [back to the homepage]({{ site.baseurl }}).
