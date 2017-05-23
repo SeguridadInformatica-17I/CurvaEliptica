@@ -15,8 +15,8 @@ Todo Criptosistema cumple la condición Dk(Ek(m))=m.
 
 Existen dos tipos fundamentales de Criptosistemas utilizados para cifrar datos e información digital y ser enviados posteriormente después por medios de transmisión libre.
 
-* Simétricos o de clave privada: se emplea la misma clave K para cifrar y descifrar, por lo tanto el emisor y el receptor deben poseer la clave. El mayor inconveniente que presentan es que se debe contar con un canal seguro para la transmisión de dicha clave.
+* **Simétricos o de clave privada:** se emplea la misma clave K para cifrar y descifrar, por lo tanto el emisor y el receptor deben poseer la clave. El mayor inconveniente que presentan es que se debe contar con un canal seguro para la transmisión de dicha clave.
 
-* Asimétricos o de llave pública:se emplea una doble clave conocidas como Kp (clave privada) y KP (clave Pública). Una de ellas es utilizada para la transformación E de cifrado y la otra para el descifrado D. En muchos de los sistemas existentes estas clave son intercambiables, es decir que si empleamos una para cifrar se utiliza la otra para descifrar y viceversa.
+* **Asimétricos o de llave pública:** se emplea una doble clave conocidas como *Kp (clave privada)* y *KP (clave Pública)*. Una de ellas es utilizada para la transformación E de cifrado y la otra para el descifrado D. En muchos de los sistemas existentes estas clave son intercambiables, es decir que si empleamos una para cifrar se utiliza la otra para descifrar y viceversa.
 
 [back to the homepage]({{ site.baseurl }}).

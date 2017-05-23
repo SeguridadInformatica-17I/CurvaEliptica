@@ -7,22 +7,20 @@ title: Diffie-Hellman con curva elı́ptica
 
 Nuestros algoritmos de curva elíptica funcionarán en un [subgrupo cíclico](https://es.wikipedia.org/wiki/Grupo_c%C3%ADclico) de una curva elíptica sobre un campo finito. Por lo tanto, nuestros algoritmos necesitarán los siguientes parámetros:
 
-* El primo p que especifica el tamaño del campo finito.
-* Los coeficientes a y  De la ecuación de la curva elíptica.
-* El punto base G que genera nuestro subgrupo.
-* La orden n del subgrupo.
+* El **primo p** que especifica el tamaño del campo finito.
+* Los **coeficientes a y b** de la ecuación de la curva elíptica.
+* El **punto base** G que genera nuestro subgrupo.
+* La **orden n** del subgrupo.
 * El cofactor h del subgrupo.
 
 En conclusión, los parámetros de dominio para nuestros algoritmos son el sextuplo (p, a, b, G, n, h).
 
 ### Algoritmo:
 
-Diffie-Hellman: protocolo para intercambio de claves.
-
 Sea E una curva elı́ptica con G un generador de un subgrupo cı́clico de orden prima p.
 
-* La clave privada es un entero aleatorio X elegido de {1, ..., n-1} (donde n es el orden del subgrupo).
-* La clave pública es el punto Y = X.G (Donde G es el punto base del subgrupo).
+* La **clave privada** es un entero aleatorio X elegido de {1, ..., n-1} (donde n es el orden del subgrupo).
+* La **clave pública** es el punto Y = X.G (Donde G es el punto base del subgrupo).
 
 Si sabemos **Y** y **G** (junto con los otros parámetros del dominio), encontrar Y es "fácil". Pero si conocemos Y y G, encontrar la clave privada X es "difícil", porque nos obliga a resolver el problema del logaritmo discreto.
 

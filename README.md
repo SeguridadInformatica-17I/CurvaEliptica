@@ -7,8 +7,18 @@ Criptografía de curva
 * Criptosistema
 
 * Definiciónes Previas
-  - Cuerpo
-  - Grupo
-  - Característica de un Cuerpo
+  1. Cuerpo
+  2. Grupo
 
-* Introduccion
+* Introducción
+  * Curva Elíptica
+  * Curvas Elipticas Aleatorias
+
+* Aritmética Geométrica
+
+* Diffie-Hellman con curva elı́ptica
+  * Algoritmo
+  * Ejemplo
+  * Key encrypion y key  MAC
+
+* Bitcoin
