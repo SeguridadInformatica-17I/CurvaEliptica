@@ -12,7 +12,7 @@ title: Definiciones Previas
   - Existencia de elemento opuesto y de inversos
   - Distributividad de la multiplicación respecto de la adición
 * Sea K un cuerpo y x∈K* = K-{0}. El orden de x es el mínimo número r>0 talque x^r= 1.
-* La característica de un cuerpo K es el mínimo número "p" tal que para todo $x∈K$ se cumple que 1 + 1 + ... + 1(p veces)=0, donde 0 es el elemento neutro de la suma y 1 es el elemento neutro del producto en elcuerpo K.
+* La característica de un cuerpo K es el mínimo número "p" tal que para todo x∈K se cumple que 1 + 1 + ... + 1(p veces)=0, donde 0 es el elemento neutro de la suma y 1 es el elemento neutro del producto en el cuerpo K.
 
 2. **Grupo:**
 * Grupo es una estructura algebraica formada por un conjunto no vacío dotado de una operación interna que combina cualquier par de elementos para componer un tercero, dentro del mismo conjunto.
